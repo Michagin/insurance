@@ -1,0 +1,92 @@
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.CheckBox?>
+<BorderPane fx:id="borderPane" fx:controller="kea.dat20b.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <top>
+        <FlowPane id="top" prefHeight="200" alignment="CENTER"><Label fx:id="header">Sea of Thieves Insurance</Label></FlowPane>
+    </top>
+    <center>
+        <ScrollPane fitToHeight="true" fitToWidth="true">
+            <VBox fx:id="innerBox" spacing="20">
+                <TitledPane fx:id="Q1">
+                    <VBox>
+                        <Label>What type of ship are you looking to insure?</Label>
+                        <ComboBox fx:id="shipType"/>
+                        <VBox spacing="3">
+                            <Label/>
+                            <Button fx:id="q1nextButton" onAction="#Q1NextButtonFire">Next</Button>
+                        </VBox>
+                    </VBox>
+                </TitledPane>
+                <TitledPane fx:id="Q2">
+                    <VBox spacing="2">
+                        <Label>Do you have any of the following items equipped on your ship?</Label>
+                        <VBox spacing="3">
+                            <HBox spacing="10">
+                                <VBox spacing="5">
+                                    <CheckBox fx:id="q2cb1">Reaper's flag or Repear's emissary flag</CheckBox>
+                                    <CheckBox fx:id="q2cb2">Jolly Roger Flag</CheckBox>
+                                    <CheckBox fx:id="q2cb3">Bilge Rat Adventure Flag</CheckBox>
+                                </VBox>
+                                <VBox spacing="5">
+                                    <CheckBox fx:id="q2cb4">Alliance Flag</CheckBox>
+                                    <CheckBox fx:id="q2cb5">LBGTQIA+ Flag</CheckBox>
+                                    <CheckBox fx:id="q2cb6">Athena’s Fortune Inaugural Legend Sails</CheckBox>
+                                </VBox>
+                            </HBox>
+                            <Label/>
+                            <HBox>
+                                <Button fx:id="q2backButton" onAction="#Q2BackButtonFire">Back</Button>
+                                <Button fx:id="q2nextButton" onAction="#Q2NextButtonFire">Next</Button>
+                            </HBox>
+                        </VBox>
+                    </VBox>
+                </TitledPane>
+                <TitledPane fx:id="Q3">
+                    <VBox spacing="2">
+                        <Label>How many Blunder- and Fire Bombs do you typically have on your ship?</Label>
+                        <Spinner fx:id="bombUnits" editable="true"/>
+                        <VBox spacing="3">
+                            <Label/>
+                            <HBox>
+                                <Button fx:id="q3backButton" onAction="#Q3BackButtonFire">Back</Button>
+                                <Button fx:id="q3nextButton" onAction="#Q3NextButtonFire">Next</Button>
+                            </HBox>
+                        </VBox>
+                    </VBox>
+                </TitledPane>
+                <TitledPane fx:id="Q4">
+                    <VBox spacing="2">
+                        <Label>Do you have any pets onboard of your ship?</Label>
+                        <ComboBox fx:id="petAnswer"/>
+                        <ComboBox fx:id="petType"/>
+                        <VBox spacing="3">
+                            <Label></Label>
+                            <Button fx:id="q4backButton" onAction="#Q4BackButtonFire">Back</Button>
+                        </VBox>
+                    </VBox>
+                </TitledPane>
+            </VBox>
+        </ScrollPane>
+    </center>
+    <bottom>
+        <VBox spacing="0">
+            <HBox fx:id="boxDoubloons">
+                <Label fx:id="labelTotalDoubloons"></Label> <Label> Doubloons</Label>
+            </HBox>
+            <HBox fx:id="boxAncientCoin">
+                <Label fx:id="labelTotalAncientCoin"></Label><Label> Ancient Coins</Label>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>
