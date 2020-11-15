@@ -13,17 +13,15 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("MainView.fxml"));
 
-        Scene scene = new Scene(root, 1280, 720);
+        Scene scene = new Scene(root, 650, 950);
         scene.getStylesheets().add(getClass().getResource("/Style.css").toExternalForm());
         scene.setFill(Color.TRANSPARENT);
 
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Sea of Thieves Insurance");
         primaryStage.setScene(scene);
-
 
         /* No top bar */
         // primaryStage.initStyle(StageStyle.TRANSPARENT);
-
 
         primaryStage.show();
     }
