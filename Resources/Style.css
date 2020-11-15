@@ -1,0 +1,24 @@
+#header{
+    -fx-font-size: 42;
+    -fx-font-weight: bold;
+}
+
+#top{
+
+    -fx-background-image: url("banner.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-attachment: fixed;
+    -fx-background-position: center;
+}
+
+#innerBox{
+
+
+    -fx-background-color: linear-gradient(from 100% 100% to 0% 0%, #010d0b, #0b1e24) repeat-y;
+    }
+#line{
+    -fx-background-image: url("hr.png");
+    -fx-background-size: 100% 4px;
+    -fx-background-position: relative;
+    -fx-background-repeat: no-repeat;
+}
